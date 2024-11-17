@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{19BD89D1-087E-4E0F-A015-0C239AFEDF73}</ProjectGuid>
+    <Keyword>QtVS_v304</Keyword>
+    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">10.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">10.0</WindowsTargetPlatformVersion>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt_defaults.props')">
+    <Import Project="$(QtMsBuild)\qt_defaults.props" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="QtSettings">
+    <QtInstall>osgeo4w-qgis-dev_QT5</QtInstall>
+    <QtModules>core;gui;widgets</QtModules>
+    <QtBuildConfig>debug</QtBuildConfig>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="QtSettings">
+    <QtInstall>osgeo4w-qgis-dev_QT5</QtInstall>
+    <QtModules>core;xml;gui;widgets</QtModules>
+    <QtBuildConfig>release</QtBuildConfig>
+  </PropertyGroup>
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(QtMsBuild)\Qt.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(QtMsBuild)\Qt.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\Code\Geo3D\Geo3D_ZTYQ\Devenv\QT5\include\QtCrypto;E:\Code\Geo3D\Geo3D_ZTYQ\Devenv\QT5\include\qt5keychain;D:\Qt\5.15.2\msvc2019_64\include;E:\Code\Geo3D\Geo3D_ZTYQ\Devenv\QGIS-ltr\include;E:\Code\Geo3D\Geo3D_ZTYQ\Devenv\3rdParty\include;E:\Code\Geo3D\Geo3D_ZTYQ\Devenv\QT5\include;E:\Code\Geo3D\Geo3D_ZTYQ\Devenv\QT5\include\QtCore;E:\Code\Geo3D\Geo3D_ZTYQ\Devenv\QT5\include\QtWidgets;E:\Code\Geo3D\Geo3D_ZTYQ\Devenv\QT5\include\QtGui;E:\Code\Geo3D\Geo3D_ZTYQ\Devenv\QT5\include\QtXml;E:\Code\Geo3D\Geo3D_ZTYQ\Devenv\QT5\include\QtSvg;E:\Code\Geo3D\Geo3D_ZTYQ\Devenv\QT5\include\QtNetWork;E:\Code\Geo3D\Geo3D_ZTYQ\Devenv\QT5\include\QtSql;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>E:\Code\Geo3D\Geo3D_ZTYQ\Devenv\QGIS-ltr\lib;E:\Code\Geo3D\Geo3D_ZTYQ\Devenv\3rdParty\lib;E:\Code\Geo3D\Geo3D_ZTYQ\Devenv\QT5\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\ QGIS\osgeo4w-qgis-dev\3rdParty\include;D:\QGIS\osgeo4w-qgis-dev\QGIS-ltr\include;D:\ QGIS\osgeo4w-qgis-dev\Qt5\include;D:\ QGIS\osgeo4w-qgis-dev\Qt5\include\QtCore;D:\ QGIS\osgeo4w-qgis-dev\Qt5\include\QtWidgets;D:\ QGIS\osgeo4w-qgis-dev\Qt5\include\QtXml;D:\ QGIS\osgeo4w-qgis-dev\Qt5\include\QtGui;E:\OSGeo4W\include;D:\QGIS\osgeo4w-qgis-dev\QT5\include\QtSvg;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_USE_MATH_DEFINES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>D:\QGIS\osgeo4w-qgis-dev\3rdParty\lib;D:\QGIS\osgeo4w-qgis-dev\QT5\lib;D:\QGIS\osgeo4w-qgis-dev\QGIS-ltr\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>qgis_core.lib;qgis_app.lib;qgis_gui.lib;Qt5Core.lib;Qt5Gui.lib;Qt5Widgets.lib;sqlite3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
+    <ClCompile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
+    <ClCompile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <QtRcc Include="YLGIS.qrc" />
+    <QtUic Include="S3dmApplySymbolDlg.ui" />
+    <QtUic Include="S3dmSymbolExportDlg.ui" />
+    <QtUic Include="S3dmSymbolImportDlg.ui" />
+    <QtUic Include="S3dmSymbolManager.ui" />
+    <QtUic Include="S3dmSymbolSaveDlg.ui" />
+    <QtUic Include="S3dmXmlGenerateDlg.ui" />
+    <QtUic Include="YLGIS.ui" />
+    <QtMoc Include="YLGIS.h" />
+    <ClCompile Include="FeatureAttribute.cpp" />
+    <ClCompile Include="S3dmApplySymbolDlg.cpp" />
+    <ClCompile Include="S3dmStyleManager.cpp" />
+    <ClCompile Include="S3dmSymbolExportDlg.cpp" />
+    <ClCompile Include="S3dmSymbolImportDlg.cpp" />
+    <ClCompile Include="S3dmSymbolManager.cpp" />
+    <ClCompile Include="S3dmSymbolSaveDlg.cpp" />
+    <ClCompile Include="S3dmXmlGenerateDlg.cpp" />
+    <ClCompile Include="YLGIS.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="FeatureAttribute.h" />
+    <QtMoc Include="S3dmApplySymbolDlg.h" />
+    <ClInclude Include="S3dmStyleManager.h" />
+    <QtMoc Include="S3dmSymbolExportDlg.h" />
+    <QtMoc Include="S3dmSymbolImportDlg.h" />
+    <QtMoc Include="S3dmSymbolManager.h" />
+    <QtMoc Include="S3dmSymbolSaveDlg.h" />
+    <QtMoc Include="S3dmXmlGenerateDlg.h" />
+    <ClInclude Include="s3d_stylemanagerlib_global.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

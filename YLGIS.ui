@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>YLGISClass</class>
+ <widget class="QMainWindow" name="YLGISClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>735</width>
+    <height>486</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>YLGIS</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QWidget" name="horizontalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>631</width>
+      <height>411</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout"/>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>735</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>工程文件</string>
+    </property>
+    <addaction name="actionOpen_File"/>
+    <addaction name="actionOpenProject"/>
+    <addaction name="actionSaveProject"/>
+    <addaction name="actionSaveAsProject"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>视图</string>
+    </property>
+    <addaction name="actionLayerTreeControl"/>
+    <addaction name="actionOverviewMap"/>
+    <addaction name="actionOpenFields"/>
+    <addaction name="actionOpenAttrTable"/>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>图层数据</string>
+    </property>
+    <addaction name="actionAddVectorData"/>
+    <addaction name="actionAddRasterData"/>
+    <addaction name="actionAddWmsLayer"/>
+    <addaction name="actionAddWfsLayer"/>
+    <addaction name="actionAddWcsLayer"/>
+   </widget>
+   <widget class="QMenu" name="SelfStylelibMng">
+    <property name="title">
+     <string>矢量符号</string>
+    </property>
+    <addaction name="actionSelfStylelibMng"/>
+    <addaction name="actionQgsStylelibMng"/>
+    <addaction name="actionChgSymbolRender"/>
+   </widget>
+   <widget class="QMenu" name="menu_5">
+    <property name="title">
+     <string>交互编辑</string>
+    </property>
+    <addaction name="actionCoordTransShp"/>
+    <addaction name="actionCoordTransqgis"/>
+    <addaction name="actionCoordTranstif"/>
+    <addaction name="actionCoordTranspoint"/>
+    <addaction name="actionZoomIn"/>
+    <addaction name="actionZoomOut"/>
+    <addaction name="actionFullExtent"/>
+    <addaction name="actionZoomActual"/>
+    <addaction name="actionPan"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+   <addaction name="menu_3"/>
+   <addaction name="SelfStylelibMng"/>
+   <addaction name="menu_5"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionOpenProject"/>
+   <addaction name="actionSaveProject"/>
+   <addaction name="actionSaveAsProject"/>
+   <addaction name="separator"/>
+   <addaction name="actionAddVectorData"/>
+   <addaction name="actionAddRasterData"/>
+   <addaction name="actionAddWmsLayer"/>
+   <addaction name="actionAddWfsLayer"/>
+   <addaction name="actionAddWcsLayer"/>
+   <addaction name="separator"/>
+   <addaction name="actionOpenFields"/>
+   <addaction name="actionOpenAttrTable"/>
+   <addaction name="separator"/>
+   <addaction name="actionZoomIn"/>
+   <addaction name="actionZoomOut"/>
+   <addaction name="actionFullExtent"/>
+   <addaction name="actionZoomActual"/>
+   <addaction name="actionPan"/>
+   <addaction name="separator"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QDockWidget" name="LayerTreeControl">
+   <property name="minimumSize">
+    <size>
+     <width>49</width>
+     <height>184</height>
+    </size>
+   </property>
+   <property name="whatsThis">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="windowTitle">
+    <string>图层管理器</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_2"/>
+  </widget>
+  <widget class="QDockWidget" name="OverviewMap">
+   <property name="minimumSize">
+    <size>
+     <width>49</width>
+     <height>230</height>
+    </size>
+   </property>
+   <property name="windowTitle">
+    <string>鹰眼视图</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents"/>
+  </widget>
+  <action name="actionOpen_File">
+   <property name="text">
+    <string>新建工程</string>
+   </property>
+  </action>
+  <action name="actionOpenProject">
+   <property name="icon">
+    <iconset resource="YLGIS.qrc">
+     <normaloff>:/YLGIS/Resources/mActionFileOpen.png</normaloff>:/YLGIS/Resources/mActionFileOpen.png</iconset>
+   </property>
+   <property name="text">
+    <string>打开工程</string>
+   </property>
+  </action>
+  <action name="actionSaveProject">
+   <property name="icon">
+    <iconset resource="YLGIS.qrc">
+     <normaloff>:/YLGIS/Resources/mActionFileSave.png</normaloff>:/YLGIS/Resources/mActionFileSave.png</iconset>
+   </property>
+   <property name="text">
+    <string>保存工程</string>
+   </property>
+  </action>
+  <action name="actionSaveAsProject">
+   <property name="icon">
+    <iconset resource="YLGIS.qrc">
+     <normaloff>:/YLGIS/Resources/mActionFileSaveAs.png</normaloff>:/YLGIS/Resources/mActionFileSaveAs.png</iconset>
+   </property>
+   <property name="text">
+    <string>另存工程</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>退出</string>
+   </property>
+  </action>
+  <action name="actionLayerTreeControl">
+   <property name="text">
+    <string>图层管理器</string>
+   </property>
+  </action>
+  <action name="actionAddVectorData">
+   <property name="icon">
+    <iconset resource="YLGIS.qrc">
+     <normaloff>:/YLGIS/Resources/mActionAddOgrLayer.png</normaloff>:/YLGIS/Resources/mActionAddOgrLayer.png</iconset>
+   </property>
+   <property name="text">
+    <string>添加矢量数据</string>
+   </property>
+  </action>
+  <action name="actionAddRasterData">
+   <property name="icon">
+    <iconset resource="YLGIS.qrc">
+     <normaloff>:/YLGIS/Resources/mActionAddRasterLayer.png</normaloff>:/YLGIS/Resources/mActionAddRasterLayer.png</iconset>
+   </property>
+   <property name="text">
+    <string>添加栅格数据</string>
+   </property>
+  </action>
+  <action name="actionSelfStylelibMng">
+   <property name="text">
+    <string>自定义符号管理</string>
+   </property>
+  </action>
+  <action name="actionQgsStylelibMng">
+   <property name="text">
+    <string>qgs符号管理</string>
+   </property>
+  </action>
+  <action name="actionChgSymbolRender">
+   <property name="text">
+    <string>更改矢量符号显示</string>
+   </property>
+  </action>
+  <action name="actionOpenFields">
+   <property name="icon">
+    <iconset resource="YLGIS.qrc">
+     <normaloff>:/YLGIS/Resources/mActionAttributes.png</normaloff>:/YLGIS/Resources/mActionAttributes.png</iconset>
+   </property>
+   <property name="text">
+    <string>打开属性表</string>
+   </property>
+  </action>
+  <action name="actionOpenAttrTable">
+   <property name="icon">
+    <iconset resource="YLGIS.qrc">
+     <normaloff>:/YLGIS/Resources/mSourceFields.png</normaloff>:/YLGIS/Resources/mSourceFields.png</iconset>
+   </property>
+   <property name="text">
+    <string>打开属性管理器</string>
+   </property>
+  </action>
+  <action name="actionCoordTransShp">
+   <property name="text">
+    <string>Shp坐标转换</string>
+   </property>
+  </action>
+  <action name="actionCoordTransqgis">
+   <property name="text">
+    <string>Qgis坐标转换</string>
+   </property>
+  </action>
+  <action name="actionCoordTranstif">
+   <property name="text">
+    <string>栅格坐标转换</string>
+   </property>
+  </action>
+  <action name="actionCoordTranspoint">
+   <property name="text">
+    <string>单点坐标转换</string>
+   </property>
+  </action>
+  <action name="actionOverviewMap">
+   <property name="text">
+    <string>鹰眼视图</string>
+   </property>
+  </action>
+  <action name="actionZoomIn">
+   <property name="icon">
+    <iconset resource="YLGIS.qrc">
+     <normaloff>:/YLGIS/Resources/mActionZoomIn.png</normaloff>:/YLGIS/Resources/mActionZoomIn.png</iconset>
+   </property>
+   <property name="text">
+    <string>放大</string>
+   </property>
+  </action>
+  <action name="actionZoomOut">
+   <property name="icon">
+    <iconset resource="YLGIS.qrc">
+     <normaloff>:/YLGIS/Resources/mActionZoomOut.png</normaloff>:/YLGIS/Resources/mActionZoomOut.png</iconset>
+   </property>
+   <property name="text">
+    <string>缩小</string>
+   </property>
+  </action>
+  <action name="actionFullExtent">
+   <property name="icon">
+    <iconset resource="YLGIS.qrc">
+     <normaloff>:/YLGIS/Resources/mActionZoomFullExtent.png</normaloff>:/YLGIS/Resources/mActionZoomFullExtent.png</iconset>
+   </property>
+   <property name="text">
+    <string>缩放至图层</string>
+   </property>
+  </action>
+  <action name="actionZoomActual">
+   <property name="icon">
+    <iconset resource="YLGIS.qrc">
+     <normaloff>:/YLGIS/Resources/mActionZoomActual.png</normaloff>:/YLGIS/Resources/mActionZoomActual.png</iconset>
+   </property>
+   <property name="text">
+    <string>缩放至初始比例</string>
+   </property>
+  </action>
+  <action name="actionPan">
+   <property name="icon">
+    <iconset resource="YLGIS.qrc">
+     <normaloff>:/YLGIS/Resources/mActionPan.png</normaloff>:/YLGIS/Resources/mActionPan.png</iconset>
+   </property>
+   <property name="text">
+    <string>浏览</string>
+   </property>
+  </action>
+  <action name="actionAddWmsLayer">
+   <property name="icon">
+    <iconset resource="YLGIS.qrc">
+     <normaloff>:/YLGIS/Resources/mActionAddWmsLayer.png</normaloff>:/YLGIS/Resources/mActionAddWmsLayer.png</iconset>
+   </property>
+   <property name="text">
+    <string>添加WMS图层</string>
+   </property>
+  </action>
+  <action name="actionAddWfsLayer">
+   <property name="icon">
+    <iconset resource="YLGIS.qrc">
+     <normaloff>:/YLGIS/Resources/mActionAddWcsLayer.png</normaloff>:/YLGIS/Resources/mActionAddWcsLayer.png</iconset>
+   </property>
+   <property name="text">
+    <string>添加WFS图层</string>
+   </property>
+  </action>
+  <action name="actionAddWcsLayer">
+   <property name="icon">
+    <iconset resource="YLGIS.qrc">
+     <normaloff>:/YLGIS/Resources/mActionAddWfsLayer.png</normaloff>:/YLGIS/Resources/mActionAddWfsLayer.png</iconset>
+   </property>
+   <property name="text">
+    <string>添加WCS图层</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="YLGIS.qrc"/>
+ </resources>
+ <connections/>
+</ui>

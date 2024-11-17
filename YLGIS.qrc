@@ -1,0 +1,34 @@
+<RCC>
+    <qresource prefix="/YLGIS">
+        <file>Resources/mActionAddGroup.png</file>
+        <file>Resources/mActionAddOgrLayer.png</file>
+        <file>Resources/mActionAddPolygon.png</file>
+        <file>Resources/mActionAddRasterLayer.png</file>
+        <file>Resources/mActionAddWcsLayer.png</file>
+        <file>Resources/mActionAddWfsLayer.png</file>
+        <file>Resources/mActionAddWmsLayer.png</file>
+        <file>Resources/mActionAttributes.png</file>
+        <file>Resources/mActionCollapseTree.png</file>
+        <file>Resources/mActionExpandTree.png</file>
+        <file>Resources/mActionFileNew.png</file>
+        <file>Resources/mActionFileOpen.png</file>
+        <file>Resources/mActionFileSave.png</file>
+        <file>Resources/mActionFileSaveAs.png</file>
+        <file>Resources/mActionMeasure.png</file>
+        <file>Resources/mActionMeasureAngle.png</file>
+        <file>Resources/mActionMeasureArea.png</file>
+        <file>Resources/mActionNewBookmark.png</file>
+        <file>Resources/mActionPan.png</file>
+        <file>Resources/mActionRemoveLayer.png</file>
+        <file>Resources/mActionShowAllLayers.png</file>
+        <file>Resources/mActionShowBookmarks.png</file>
+        <file>Resources/mActionZoomActual.png</file>
+        <file>Resources/mActionZoomFullExtent.png</file>
+        <file>Resources/mActionZoomIn.png</file>
+        <file>Resources/mActionZoomLast.png</file>
+        <file>Resources/mActionZoomNext.png</file>
+        <file>Resources/mActionZoomOut.png</file>
+        <file>Resources/mSourceFields.png</file>
+        <file>Resources/YLGIS.png</file>
+    </qresource>
+</RCC>
